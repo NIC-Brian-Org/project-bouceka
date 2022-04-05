@@ -1,0 +1,143 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+.footer {
+  margin: 2rem 0 5rem 0;
+  .flex-container {
+    display: flex;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+
+    .column {
+      margin-left: 2rem;
+
+      &:not(:first-child) {
+        margin-left: 6rem;
+        @include respond(tab-port) {
+          margin-left: 0;
+        }
+        @media (max-width: 1024px) {
+          margin-left: 2rem;
+        }
+      }
+      @include respond(tab-port) {
+        margin-left: 0;
+      }
+
+      h3 {
+        @include respond(tab-port) {
+          text-align: center;
+        }
+      }
+    }
+    ul.menu {
+      display: flex;
+      list-style: none;
+      margin-top: 4rem;
+      justify-content: center;
+
+      li {
+        margin: 0 2.5rem;
+        @include respond(tab-port) {
+          margin: 0 2rem;
+        }
+        a {
+          font-size: 2rem;
+          text-decoration: none;
+          color: $color-black;
+          &:hover {
+            color: $color-secondary;
+            transition: all ease-out 0.2s;
+          }
+        }
+      }
+    }
+    ul.contact {
+      list-style: none;
+      margin-top: 3rem;
+      @include respond(tab-port) {
+        width: 30rem;
+        margin: 3rem auto 0 auto;
+      }
+
+      li {
+        margin: 1.5rem 0;
+        align-content: flex-end;
+        a {
+          font-size: 2rem;
+          text-decoration: none;
+          color: $color-black;
+          &:hover {
+            color: $color-secondary;
+            transition: all ease-out 0.2s;
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    margin: 5rem 0;
+  }
+  &__icon {
+    vertical-align: top;
+    margin-right: 1rem;
+    & > path {
+      stroke: $color-accent;
+    }
+  }
+
+  &__links {
+    @include respond(tab-port) {
+      margin: 2rem 0;
+    }
+    & > a {
+      text-decoration: none;
+      margin-right: .5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__social-media {
+    vertical-align: top;
+    margin-right: 1rem;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+  }
+  &__logo {
+    width: 35rem;
+    @include respond(tab-port) {
+      width: 25rem;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .warning {
+    color: $color-alert;
+  }
+
+  .licence {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  .time {
+    display: flex;
+  }
+
+  .open-hours__date p {
+    margin-bottom: 1.5rem;
+  }
+}

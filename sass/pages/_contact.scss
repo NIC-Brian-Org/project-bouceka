@@ -1,0 +1,125 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+/**************************/
+/* CONTACT PAGE */
+/**************************/
+
+.contact {
+  margin-top: 3rem;
+
+  &__content {
+    margin-top: 5rem;
+    display: flex;
+
+	  @include respond(phone) {
+      display: block;
+    }
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  &__form {
+    flex: 1;
+    padding-right: 10rem;
+	  @include respond(phone) {
+      padding-right: 0;
+      margin-bottom: 5rem;
+    }
+
+    .form-item {
+      padding: 1rem 0;
+
+      input {
+        outline: none;
+        width: 100%;
+        height: 5.5rem;
+        border: 2px solid $color-accent;
+        background-color: $background-color;
+        font: inherit;
+        padding-left: 1rem;
+      }
+
+      textarea {
+        padding: 0.5rem 0.5rem 0 1rem;
+        width: 100%;
+        height: 10.5rem;
+        border: 2px solid $color-accent;
+        background-color: $background-color;
+        resize: none;
+        font: inherit;
+        outline: none;
+        display: block;
+      }
+
+      .error {
+        border-color: $color-alert;
+        border-radius: 3px 3px 0 0;
+
+        &__message {
+          background-color: $color-alert;
+          border-radius: 0 0 3px 3px;
+          padding: 0.5rem 1rem;
+          color: $color-white;
+        }
+      }
+    }
+
+    button {
+      background: none;
+      background-color: $color-accent;
+      color: $color-white;
+      border: 1px solid $color-secondary;
+      padding: 0.8rem 4rem;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+  }
+
+  a {
+    text-decoration: none;
+		color: inherit;
+  }
+  &__info {
+    flex: 1;
+    & > div {
+      margin: 1rem 0;
+
+      h4 {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  &__opening-hours {
+    .time {
+      display: flex;
+    }
+  }
+
+  .google-map {
+    margin: 5rem 0;
+    border: 2px solid $color-primary;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid $color-dark;
+    padding: 1rem 0.5rem;
+    margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+}

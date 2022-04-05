@@ -1,0 +1,56 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+/**************************/
+/* HEADER */
+/**************************/
+
+.header {
+  background-image: linear-gradient(to right top, rgba(144, 51, 10, 0.8) 80%, rgba(144, 51, 10, 0.7)),
+    url('../assets/images/header_background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero {
+  display: flex;
+  min-height: 100vh;
+  color: white;
+  align-items: center;
+  &__description {
+    white-space: pre-line;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    width: 50%;
+    @include respond(tab-port) {
+      width: 70%;
+    }
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  & div svg {
+    @media (max-width: 600px) {
+      height: 9rem;
+    }
+  }
+
+  & div svg path {
+    fill: white;
+  }
+  & div:hover svg path {
+    fill: $color-secondary;
+    transition: fill ease-out 0.2s;
+  }
+}

@@ -1,0 +1,104 @@
+@import '../abstract/variables';
+
+/**************************/
+/* MENU PAGE */
+/**************************/
+
+.menu-container {
+  margin-top: 3rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.menu {
+  padding-bottom: 5rem;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid $color-outline;
+  }
+
+  &__heading {
+    h3 {
+      color: $color-accent;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    p {
+      max-width: 84rem;
+      margin: 0 auto;
+    }
+  }
+  &__content {
+    display: flex;
+  }
+
+  &__title {
+    flex: 1 0 auto;
+    align-self: center;
+    text-align: center;
+    width: 34rem;
+		@include respond(tab-port) {
+      flex: 25%;
+    }
+
+    h2 {
+      color: $color-accent;
+      text-transform: uppercase;
+    }
+  }
+
+  &__rotate {
+    transform: rotate(-90deg);
+
+		@include respond(phone) {
+      position: absolute;
+      width: 20rem;
+      left: -5rem;
+    }
+  }
+
+  &__meals {
+    margin-top: 5rem;
+    flex: 3 0 auto;
+		@include respond(tab-port) {
+      flex: 75%;
+    }
+  }
+
+  &__meal {
+    max-width: 58rem;
+    margin: 1rem;
+
+		h4 {
+      font-weight: 600;
+    }
+
+    .size {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+			@include respond(tab-port) {
+        font-size: 1.8rem;
+      }
+			@include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .ingredients {
+      color: $color-dark;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+			@include respond(tab-port) {
+        font-size: 1.8rem;
+      }
+			@include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
+
+
+  }
+}

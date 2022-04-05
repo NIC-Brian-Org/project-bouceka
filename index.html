@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Four Quarters is a Cumberland restaurant that offers breakfast and lunch. All ingredients are from local producers and transform them into signuture recipes."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="assets/favicon.ico" />
+    <title>Four Quarters | Breakfast and Lunch in Cumberland</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="./js/navigationButton.js"></script>
+    <script defer src="./js/testimony.js"></script>
+		<script defer src="./js/gallery.js"></script>
+  </head>
+
+  <body>
+    <nav class="sticky main-page">
+      <div class="row">
+        <div class="top-nav">
+          <a class="top-nav__logo-label" href="index.html">
+            <img src="./assets/top-logo.svg" alt="Four Quarters logo" />
+          </a>
+          <a class="top-nav__logo-star" href="index.html">
+            <img src="./assets/star-logo.svg" alt="Four Quarters logo" />
+          </a>
+          <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="body-text-main static-menu">
+            <li>
+              <a href="./menu.html"> Menu </a>
+            </li>
+            <li>
+              <a href="./about-us.html"> About Us </a>
+            </li>
+            <li>
+              <a href="./gallery.html"> Gallery </a>
+            </li>
+            <li>
+              <a href="./contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapsed-menu no-active">
+        <ul class="collapsed-list body-text-intro no-active">
+          <li>
+            <a href="./menu.html">Menu</a>
+          </li>
+          <li>
+            <a href="./about-us.html">About Us</a>
+          </li>
+          <li>
+            <a href="./gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <hr />
+        <div class="social-media">
+          <a href="https://www.facebook.com/4quartersrestaurant" target="_blank">
+            <img class="fill" src="./assets/icons/facebook.svg" alt="Facebook icon" />
+          </a>
+          <a href="https://www.instagram.com/4quarters.cumberland" target="_blank">
+            <img class="fill" src="./assets/icons/instagram.svg" alt="Instagram icon" />
+          </a>
+          <a href="mailto:info@fourqaurters.ca">
+            <img class="outline" src="./assets/icons/mail.svg" alt="Mail icon" />
+          </a>
+          <a href="tel:250-400-3687">
+            <img class="outline" src="./assets/icons/call.svg" alt="Phone icon" />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="row">
+        <div class="hero">
+          <div class="promo-text">
+            <h1 class="heading heading__primary">Stand For Something Good</h1>
+            <p class="hero__description">
+              Come and enjoy your breakfast on the patio with a mountain view. Discover our significant variation of breakfast meals and lunch meals. Our family atmosphere welcomes you.
+            </p>
+            <a class="btn btn__primary" href="/menu.html"> Explore Our Menu </a>
+          </div>
+        </div>
+      </div>
+      <a href="#our-story">
+        <img class="arrow" src="./assets/arrow-down.svg" alt="" />
+      </a>
+    </header>
+    <section id="our-story" class="section-our-story">
+      <div class="title">
+        <h2 class="heading heading__secondary center">Our Story</h2>
+        <p class="heading heading__background">Our Story</p>
+      </div>
+      <div class="row">
+        <div class="section">
+          <figure>
+            <img class="image__story" src="./assets/images/english_muffins.jpg" alt="Homemade English muffins" />
+            <figcaption>Our homemade English muffins</figcaption>
+          </figure>
+          <p class="body-text-main">
+            Welcome to Four Quarters, situated in beautiful Cumberland, British Columbia. Since the summer of 2017, we have been offering breakfast and lunch. All our ingredients are from local producers that we are happy to support. We are proud to be part of the awesome Cumberland community.
+          </p>
+          <figure>
+            <img
+              class="image__story display-none-below-900"
+              src="./assets/images/patio_breakfast.jpg"
+              alt="Baked eggs with a fruit bowl on the patio"
+            />
+            <figcaption>Our patio offers Cumberland view</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="section-menu-overview">
+      <div class="title-white">
+        <h2 class="heading heading__secondary center">Breakfast &amp; Lunch</h2>
+        <p class="heading heading__background-white">Breakfast &amp; Lunch</p>
+      </div>
+      <div class="row">
+        <div class="menu-overview">
+          <img class="menu-overview__image" src="./assets/images/hot_pan.jpg" alt="Baked eggs with a fruit bowl" />
+          <ul class="menu-overview__option">
+            <li>
+              <a class="heading heading__quaternary" href="/menu.html#benedict">Benedict</a>
+            </li>
+            <li>
+              <a class="heading heading__quaternary" href="/menu.html#sandwich">Sandwiches</a>
+            </li>
+            <li>
+              <a class="heading heading__quaternary" href="/menu.html#samosa">Samosas</a>
+            </li>
+            <li>
+              <a class="heading heading__quaternary" href="/menu.html#wrap">Wraps</a>
+            </li>
+          </ul>
+          <img class="menu-overview__image" src="./assets/images/chicken_potato.jpg" alt="Chicken with cheese and baked potato" />
+        </div>
+      </div>
+    </section>
+    <section class="section-testimonial">
+      <div class="title">
+        <h2 class="heading heading__secondary center">Testimonials</h2>
+        <p class="heading heading__background">Testimonials</p>
+      </div>
+      <div class="row">
+        <div class="testimonial__slider">
+          <div class="testimonial__section">
+            <button class="slider-button" id="previous-button">
+              <img src="./assets/icons/chevron/left.svg" alt="" />
+            </button>
+            <div class="testimonial__box">
+              <p class="testimonial__content">
+              </p>
+              <span class="testimonial__author small-text"></span>
+
+
+            </div>
+            <button class="slider-button" id="next-button">
+              <img src="./assets/icons/chevron/right.svg" alt="" />
+            </button>
+          </div>
+					<div class="dot-container">
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+					</div>
+        </div>
+      </div>
+    </section>
+    <section class="section-gallery">
+      <div class="gallery">
+        <a href="/gallery.html" class="button-gallery"> View Gallery </a>
+        <figure class="gallery__image">
+          <img src="./assets/images/burger.jpg" alt="Split burger and baked potatos" />
+        </figure>
+        <figure class="gallery__image">
+          <img src="./assets/images/benedict-eggs.jpg" alt="Benedict eggs with bread" />
+        </figure>
+        <figure class="gallery__image">
+          <img src="./assets/images/french-toast.jpg" alt="French toast with raspberries" />
+        </figure>
+        <figure class="gallery__image">
+          <img src="./assets/images/benedict.jpg" alt="Benedict eggs with bread" />
+        </figure>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="row">
+        <hr />
+        <div class="footer__content">
+          <div class="flex-container">
+            <div class="column">
+              <nav>
+                <img class="footer__logo" src="./assets/logo-label.svg" alt="Four Quarters logo" />
+                <ul class="menu">
+                  <li>
+                    <a href="/menu.html">Menu</a>
+                  </li>
+                  <li>
+                    <a href="/about-us.html">About us</a>
+                  </li>
+                  <li>
+                    <a href="/gallery.html">Gallery</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="column intend">
+              <h3 class="heading heading__quaternary">Contact</h3>
+              <ul class="contact medium-text">
+                <li>
+                  <img class="footer__icon" src="./assets/icons/location.svg" alt="Location icon" />
+                  <span>2247 Dunsmuir Ave, Cumberland</span>
+                </li>
+                <li>
+                  <img class="footer__icon" src="./assets/icons/mail.svg" alt="Mail icon" />
+                  <a href="mailto:info@fourqaurters.ca">
+                    <span>info@fourquarters.ca</span>
+                  </a>
+                </li>
+                <li>
+                  <img class="footer__icon" src="./assets/icons/call.svg" alt="Phone icon" />
+                  <a href="tel:250-400-3687">
+                    <span>250-400-3687</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="column intend">
+              <h3 class="heading heading__quaternary">Opening hours</h3>
+              <ul class="contact medium-text">
+                <li class="time">
+                  <div class="open-hours__icon">
+                    <img class="footer__icon" src="./assets/icons/time.svg" alt="Clock icon" />
+                  </div>
+                  <div class="open-hours__date">
+                    <p>Thursday - Monday 9am - 3pm</p>
+                    <p>Tuesday - Wednesday CLOSED</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="licence">
+          <p class="small-text">©2021 Four Quarters, All Rights Reserved</p>
+          <div class="footer__links">
+            <a href="https://www.facebook.com/4quartersrestaurant" target="_blank">
+              <img class="footer__social-media" src="./assets/icons/facebook.svg" alt="Facebook icon" />
+            </a>
+            <a href="https://www.instagram.com/4quarters.cumberland" target="_blank">
+              <img class="footer__social-media" src="./assets/icons/instagram.svg" alt="Instagram icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+		<div class="popup" id="popup">
+      <div class="popup__content">
+        <button class="popup__close">&times;</button>
+        <h2 class="heading-secondary center">French toast with raspberries</h2>
+        <img src="./assets/images/french-toast.jpg" alt="French toast with raspberries" class="popup__img" />
+      </div>
+    </div>
+  </body>
+</html>
