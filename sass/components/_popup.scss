@@ -18,8 +18,9 @@
   &__content {
     @include absCenter;
 
+		// max-height: 80%;
     padding: 6rem;
-    width: 75%;
+    width: 60%;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     overflow: hidden;
