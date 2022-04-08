@@ -1,2 +1,12 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7361287&assignment_repo_type=AssignmentRepo)
-# dgl-113-project
+# Website Project
+
+This is your remote repository for your website project. All the instructions are availble in BBL.
+
+1. Clone your remote GitHub repository onto your local machine using GitHub Desktop. There are no files besides the readme file in this repository.
+2. Publish your repository as a website.
+3. Code your website. The instructions provide a suggested timeline for coding. Commit the in-progress coding to the local repository regularly. Push your commits to GitHub any time you’ve made significant progress.
+5. Add comments to highlight features and decisions.
+6. Validate your work (both HTML and CSS) and fix bugs (don't forget to take screenshots of the final validation).
+7. Test your website as detailed in the intructions and fix any issues (don't forget to take screenshots of the final testing).
+
+

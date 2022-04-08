@@ -1,0 +1,52 @@
+@import '../abstract/mixins';
+
+/**************************/
+/* FOOTER ON THE MAIN PAGE */
+/**************************/
+
+.section-our-story {
+  padding: 15rem 0 20rem 0;
+  @media (max-width: 600px) {
+    padding: 10rem 0 15rem 0;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.center {
+  text-align: center;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+figure .image__story {
+  margin-right: 2rem;
+  width: 35rem;
+  height: 45rem;
+  object-fit: cover;
+
+  @media (max-width: 1024px) {
+    aspect-ratio: 4/3;
+    width: auto;
+    height: 35rem;
+    margin: 0 0 3rem 0;
+  }
+  @media (max-width: 600px) {
+    height: 25rem;
+  }
+}
+
+figure:last-child .image__story,
+figure:last-child figcaption {
+  margin-left: 2rem;
+  margin-right: 0;
+}

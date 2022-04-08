@@ -1,0 +1,65 @@
+@import '../abstract/variables';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  // @include respond(tab-port) {
+  //   font-size: 55%;
+  // }
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(small-phone) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%; //1rem = 12, 12/16
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1200px) {
+    padding: 0 2%;
+  }
+  @media only screen and (max-width: 900px) {
+    padding: 0 5%;
+  }
+}
+
+.display-none-below-900 {
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+
+  figcaption {
+    font-style: italic;
+    color: $color-grey-dark;
+  }
+}

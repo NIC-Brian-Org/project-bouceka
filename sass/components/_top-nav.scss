@@ -1,0 +1,236 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+/**************************/
+/* TOP NAVIGATION */
+/**************************/
+
+hr.divider {
+  border-top: 1px solid $color-white;
+}
+
+.sticky {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 7rem 0;
+  background-size: cover;
+
+	// the sticky looks different in main page because of the hero
+  &.main-page {
+    background-position: center;
+    position: absolute;
+  }
+
+  &.other-page {
+    background-image: linear-gradient(to right top, rgba(144, 51, 10, 0.8) 80%, rgba(144, 51, 10, 0.7)),
+      url('../assets/images/header_background.jpg');
+    border-bottom: 4px solid $color-secondary;
+    background-size: cover;
+    background-position-y: 20%;
+  }
+
+  @include respond(tab-port) {
+    padding: 2rem 0;
+  }
+
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid $color-white;
+    padding: 0 2rem;
+    @include respond(tab-port) {
+      border-bottom: 0;
+    }
+
+    ul.static-menu {
+      display: flex;
+      list-style: none;
+      margin-bottom: -1rem;
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      li {
+        margin: 0 3rem;
+        justify-content: space-between;
+        align-content: flex-end;
+
+        a {
+          text-decoration: none;
+          color: $color-white;
+          border-bottom: 2px solid transparent;
+          &:hover,
+          &.active {
+            color: $color-secondary;
+            transition: all ease-out 0.2s;
+          }
+        }
+        &:last-child {
+          margin-left: 3rem;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__logo-star {
+      z-index: 3;
+      display: none;
+      @include respond(tab-port) {
+        display: block;
+        & img {
+          height: 11rem;
+          width: 11rem;
+        }
+      }
+    }
+    &__logo-label {
+      z-index: 3;
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+}
+
+.collapsed-menu {
+  position: absolute;
+  top: -100%;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $color-primary;
+  transition: top 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	@media (min-width: 901px) {
+		display: none;
+	}
+
+  hr {
+    border: 1px solid $color-white;
+    width: 50%;
+    border-radius: 2px;
+  }
+
+  &.is-active {
+    top: 0;
+    position: fixed;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    height: 35%;
+    @include respond(tab-port) {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    li {
+      justify-content: space-between;
+      align-content: flex-end;
+
+      a {
+        text-decoration: none;
+        color: $color-white;
+        &:hover {
+          color: $color-secondary;
+          transition: color ease-out 0.2s;
+        }
+      }
+    }
+  }
+
+  & .social-media {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    & a {
+      margin-right: 2rem;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      & > img {
+        height: 4rem;
+        width: 4rem;
+        &.fill {
+          filter: invert(99%) sepia(3%) saturate(396%) hue-rotate(218deg) brightness(116%) contrast(100%);
+        }
+        &.outline {
+          filter: invert(99%) sepia(3%) saturate(396%) hue-rotate(218deg) brightness(116%) contrast(100%);
+        }
+      }
+    }
+  }
+}
+
+// inspired by https://codepen.io/designcouch/pen/Atyop
+
+.no-active {
+  display: none;
+}
+
+#nav-icon {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 3;
+
+  span {
+    @media (min-width: 900px) {
+      display: none;
+    }
+    z-index: 3;
+    display: block;
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    background: $color-white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+    &:nth-child(2) {
+      top: 15px;
+      transform-origin: left center;
+    }
+
+    &:nth-child(3) {
+      top: 30px;
+      transform-origin: left center;
+    }
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 8px;
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+    left: 50px;
+  }
+
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 36px;
+    left: 8px;
+  }
+}

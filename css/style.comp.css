@@ -1,0 +1,180 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 21em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: var(--background);
+  color: var(--text); }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  @media only screen and (max-width: 1200px) {
+    .row {
+      padding: 0 2%; } }
+  @media only screen and (max-width: 900px) {
+    .row {
+      padding: 0 5%; } }
+
+@media only screen and (max-width: 1000px) {
+  .display-none-below-900 {
+    display: none; } }
+
+body {
+  font-family: 'Nunito';
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.7; }
+
+.heading {
+  color: var(--text);
+  font-family: 'American Typewriter';
+  font-weight: 400; }
+  .heading__primary {
+    font-size: 6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading__primary {
+        font-size: 4rem; } }
+  .heading__secondary {
+    font-size: 4.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading__secondary {
+        font-size: 3.5rem; } }
+  .heading__tertiary {
+    font-size: 3rem; }
+  .heading__quaternary {
+    font-size: 2.4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading__quaternary {
+        font-size: 1.9rem; } }
+  .heading__background {
+    font-size: 11rem;
+    font-weight: 600;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.03);
+    text-align: center;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 0%;
+    width: 100%; }
+    @media (max-width: 1000px) {
+      .heading__background {
+        font-size: 7rem; } }
+    @media (max-width: 600px) {
+      .heading__background {
+        display: none; } }
+  .heading__background-white {
+    font-size: 11rem;
+    font-weight: 600;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.03);
+    text-align: center;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 0%;
+    width: 100%; }
+    @media (max-width: 1000px) {
+      .heading__background-white {
+        font-size: 7rem; } }
+    @media (max-width: 600px) {
+      .heading__background-white {
+        display: none; } }
+
+.body-text-intro {
+  font-size: 2.4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .body-text-intro {
+      font-size: 2rem; } }
+
+.body-text-main {
+  font-size: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .body-text-main {
+      font-size: 1.8rem; } }
+
+.medium-text {
+  font-size: 1.7rem; }
+
+.caption-text {
+  font-size: 1.5rem; }
+
+.small-text {
+  font-size: 1.2rem; }
+
+@font-face {
+  font-family: 'Nunito';
+  font-weight: 400;
+  src: url("../../assets/fonts/Nunito-Regular.ttf") format("truetype"); }
+
+
+@font-face {
+  font-family: 'American Typewriter';
+  font-weight: 400;
+  src: url("../../assets/fonts/AmericanTypewriter-01.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'American Typewriter';
+  font-weight: 600;
+  src: url("../../assets/fonts/AmericanTypewriter-Semibold-04.ttf") format("truetype"); }
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 7rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .navbar {
+      padding: 2rem 0; } }
+  .navbar .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    padding: 0 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar .main-nav {
+        border-bottom: 0; } }
+    .navbar .main-nav ul.static-menu {
+      display: flex;
+      list-style: none;
+      margin-bottom: -1rem; }
+      @media only screen and (max-width: 56.25em) {
+        .navbar .main-nav ul.static-menu {
+          display: none; } }
+      .navbar .main-nav ul.static-menu li {
+        margin: 0 3rem;
+        justify-content: space-between;
+        align-content: flex-end; }
+        .navbar .main-nav ul.static-menu li a {
+          text-decoration: none;
+          color: #fff;
+          border-bottom: 2px solid transparent; }
+          .navbar .main-nav ul.static-menu li a:hover, .navbar .main-nav ul.static-menu li a.active {
+            color: #edcc90;
+            transition: all ease-out 0.2s; }
+        .navbar .main-nav ul.static-menu li:last-child {
+          margin-left: 3rem;
+          margin-right: 0; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar .main-nav__logo {
+        z-index: 3; }
+        .navbar .main-nav__logo SVG {
+          width: 10rem;
+          height: 100%; } }
