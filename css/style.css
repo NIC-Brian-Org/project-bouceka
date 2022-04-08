@@ -841,6 +841,16 @@ hr.divider {
     @media only screen and (max-width: 37.5em) {
       .contact__content {
         display: block; } }
+    .contact__content .success-message {
+      background-color: #22a722;
+      color: #fff;
+      height: 100%;
+      padding: 1.2rem 3rem;
+      margin-left: 10rem;
+      visibility: visible; }
+      .contact__content .success-message.hidden {
+        visibility: hidden;
+        transition: all .3s; }
   .contact #map {
     height: 400px;
     width: 100%; }

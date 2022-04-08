@@ -12,11 +12,12 @@
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <title>Contact | Four Quarters</title>
     <link rel="stylesheet" href="css/style.css" />
-		<script defer src="./js/navigationButton.js"></script>
+    <script defer src="./js/navigationButton.js"></script>
+    <script defer src="./js/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script>
       function initMap() {
-
         var address = '2744 Dunsmuir Ave, Cumberland, BC V0R 1S0';
 
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -114,7 +115,7 @@
 
         <div class="contact__content">
           <div class="contact__form">
-            <form action="index.html">
+            <form id="contact-form">
               <div class="form-item">
                 <label for="name">Name *</label>
                 <input type="text" id="name" placeholder="Your name" required />
@@ -136,6 +137,7 @@
               </div>
               <div class="form-item">
                 <button>Submit</button>
+                <span class="success-message hidden">Email sent successfully</span>
               </div>
             </form>
           </div>

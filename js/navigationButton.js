@@ -1,6 +1,11 @@
-const btnNavEl = document.getElementById('nav-icon'); // navigation icon
-const headerEl = document.getElementsByClassName('collapsed-menu'); // navigation list
+"use strict"
 
+// reference of the navigation icon
+const btnNavEl = document.getElementById('nav-icon');
+// reference of the navigation list
+const headerEl = document.getElementsByClassName('collapsed-menu');
+
+// set event listener that checks whether the user clicks of hamburger menu
 btnNavEl.addEventListener('click', function () {
   if (headerEl[0].classList[1] === 'no-active') {
 		// open the navigation
